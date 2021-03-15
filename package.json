@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "generate": "ng g",
     "heroku-postbuild": "ng build --prod",
-    "postinstall": "ng build --aot -prod"
+    "postinstall": "ng build --prod"
   },
   "private": true,
   "dependencies": {
