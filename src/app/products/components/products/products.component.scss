@@ -1,0 +1,36 @@
+@import "../../../../assets/css/variables";
+@import "../../../../assets/css/mixins";
+
+@media only screen and (max-width: 767px) {
+  .menu {
+    flex: 1 1 100%;
+  }
+}
+
+.products {
+  @include flex-column;
+  flex-wrap: wrap;
+  flex: 1 1 50%;
+  &__outer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  @media only screen and (min-width: 768px) {
+    &__container {
+      flex: 1 1 50%;
+      max-width: 50%;
+      @include flex-column;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 1023px) {
+    &__container {
+      flex: 1 1 25%;
+      max-width: 25%;
+    }
+  }
+}
