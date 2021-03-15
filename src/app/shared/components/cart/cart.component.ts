@@ -23,9 +23,7 @@ export class CartComponent implements OnInit {
       this.totalItems = res.totalItems;
       this.totalPrice = 0;
       this.products.forEach((item) => {
-
         const total = item.total || 0;
-        console.log(total)
         this.totalPrice = this.totalPrice + total;
       });
     });

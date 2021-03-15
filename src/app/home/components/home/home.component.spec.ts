@@ -39,9 +39,9 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  it('should h1 has the value Home page', () => {
+  it('should h1 has the value Home', () => {
     const nativeEl = fixture.nativeElement;
-    expect(nativeEl.querySelector('h1').textContent).toContain('Home page');
+    expect(nativeEl.querySelector('h1').textContent).toContain('Home');
   });
   it('should display Banners', fakeAsync(() => {
     component.ngOnInit();

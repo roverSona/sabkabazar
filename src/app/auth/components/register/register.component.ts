@@ -17,7 +17,6 @@ import { mustMatch } from 'src/app/shared/helpers/must-match.validator';
 export class RegisterComponent {
   signUpForm: FormGroup;
   constructor(
-    private readonly fb: FormBuilder,
     private readonly router: Router
   ) {
     this.signUpForm = new FormGroup(
@@ -39,7 +38,7 @@ export class RegisterComponent {
     );
   }
 
-  submitData() {
+  submitData(): void {
     this.signUpForm.markAllAsTouched();
     if (this.signUpForm.valid) {
       this.router.navigate([PRODUCTS.url]);

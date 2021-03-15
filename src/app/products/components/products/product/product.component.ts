@@ -14,4 +14,7 @@ export class ProductComponent {
   buyNow(): void {
     this.cartService.addItemToCart(this.product);
   }
+  truncateDescription(des = ''): string {
+    return des.slice(0, 160) + '...';
+  }
 }

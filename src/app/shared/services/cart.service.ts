@@ -60,7 +60,7 @@ export class CartService {
 
     this.saveCartValue();
   }
-  private saveCartValue() {
+  private saveCartValue(): void {
     localStorage.setItem(
       'cart',
       JSON.stringify({
@@ -69,7 +69,7 @@ export class CartService {
       })
     );
   }
-  broadcastCart(currentItems: Product[], updatecart = false) {
+  broadcastCart(currentItems: Product[], updatecart = false): void {
     this.itemsInCart.next({
       products: currentItems,
       totalItems: this.calculateTotalItems(currentItems),

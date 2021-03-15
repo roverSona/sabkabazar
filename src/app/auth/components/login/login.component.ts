@@ -22,7 +22,7 @@ export class LoginComponent {
     });
   }
 
-  submitData() {
+  submitData(): void {
     this.loginForm.markAllAsTouched();
     if (this.loginForm.valid) {
       localStorage.setItem('user', JSON.stringify(this.loginForm.value));

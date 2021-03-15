@@ -1,9 +1,10 @@
 @import "src/assets/css/variables";
 @import "src/assets/css/mixins";
 
-h3 {
+h2 {
   margin: 20px 0 0 10px;
   flex-grow: 1;
+  font-size: 1.17em;
 }
 .product {
   &__item {
@@ -62,7 +63,6 @@ h3 {
         width: 133px;
         height: 133px;
       }
-      border-right: 2px solid $color-input-gray;
       &--desc {
         height: 86px;
         overflow: hidden;

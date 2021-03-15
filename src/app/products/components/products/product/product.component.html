@@ -1,9 +1,9 @@
-<h3>{{ product.name }}</h3>
+<h2>{{ product.name }}</h2>
 <div class="product__item">
   <img src="../../../assets{{ product.imageURL }}" alt="" />
   <div class="product__item--text">
     <p class="product__item--desc" [title]="product.description">
-      {{ product.description }}
+      {{ truncateDescription(product.description) }}
     </p>
     <div class="product__item--price-mbl">
       <span class="badge" *ngIf="product.count">{{ product.count }}</span>
@@ -23,7 +23,8 @@
         attr.aria-label="{{ product.name }} Rs. {{ product.price }} Buy Now"
         (click)="buyNow()"
       >
-        Buy Now  <span class="badge" *ngIf="product.count">{{ product.count }}</span>
+        Buy Now
+        <span class="badge" *ngIf="product.count">{{ product.count }}</span>
       </button>
     </div>
   </div>
